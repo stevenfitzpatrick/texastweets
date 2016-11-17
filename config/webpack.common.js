@@ -32,9 +32,9 @@ module.exports = {
 		        loader: 'file?name=assets/[name].[hash].[ext]'
 			},
 			{
-		        test: /\.css$/,
-		        exclude: helpers.root('src', 'app'),
-		        loader: ExtractTextPlugin.extract({ fallbackLoader: 'style-loader', loader: 'css?sourceMap' })
+				test: /\.css$/,
+				exclude: helpers.root('src', 'app'),
+				loader: ExtractTextPlugin.extract({ fallbackLoader: 'style-loader', loader: 'css?sourceMap' })
 			},
 			{
 				test: /\.css$/,

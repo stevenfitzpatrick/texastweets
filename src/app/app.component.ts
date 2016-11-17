@@ -1,10 +1,20 @@
-import { Component } from '@angular/core';
-import '../../public/css/styles.css';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'my-app',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
-})
+    selector: 'my-app',
+    template : `
+    <h1>{{title}}</h1>
+    <nav>
+        <a routerLink='/dashboard'>Dashboard</a>
+        <a routerLink='/heroes'>Heroes</a>
+    </nav>
 
-export class AppComponent { }
+    <router-outlet></router-outlet>
+    `
+})
+export class AppComponent implements OnInit {
+    title: string = "Tour of heroes";
+    constructor() { }
+
+    ngOnInit() { }
+}
